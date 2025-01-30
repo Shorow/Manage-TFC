@@ -6,7 +6,7 @@ terraform {
     }
   }
 }
-resource "tfe_project" "CliProject" {
+resource "tfe_project" "CliProject" { #change name as per your needs and organization name to match the one you have created in the portal
   name         = "CliProject"
   organization = "TechnicalAssessmentHCP"
 }
@@ -27,7 +27,7 @@ resource "tfe_workspace" "TestWorkspace3" {
 }
 
 resource "tfe_oauth_client" "ClientAuth" {
-  organization     = "TechnicalAssessmentHCP" #change to your organization name
+  organization     = "TechnicalAssessmentHCP" 
   api_url          = "https://api.github.com"
   http_url         = "" #input the url for the repo
   oauth_token      = "" #you should input a value of your generated API token for acces to your Github repo
